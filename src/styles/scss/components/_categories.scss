@@ -4,6 +4,14 @@
   ul {
     display: flex;
 
+    @media screen and (max-width: 1182px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and(max-width: 871px) {
+      flex-wrap: wrap;
+    }
+
     li {
       background-color: #f9f9f9;
       padding: 13px 30px;

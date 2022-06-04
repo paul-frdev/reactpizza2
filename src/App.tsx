@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
+import { ScrollToTop } from './helpers/ScrollToTop';
 import { AppRoutes } from './routes/AppRoutes';
 
 import './styles/scss/app.scss';
@@ -8,7 +9,9 @@ function App() {
   return (
     <>
       <Router>
-        <AppRoutes/>
+        <ScrollToTop>
+          <AppRoutes />
+        </ScrollToTop>
       </Router>
     </>
   );

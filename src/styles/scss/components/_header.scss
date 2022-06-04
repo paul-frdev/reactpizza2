@@ -1,13 +1,28 @@
-@import '../variables';
+@import "../variables";
 
 .header {
   border-bottom: 1px solid $gray-line;
-  padding: 40px 0;
+  padding-top: 40px;
 
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 244px 1fr 144px;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+
+    @media screen and(max-width: 751px) {
+      grid-template-columns: 244px 1fr;
+      justify-items: left;
+    }
+
+    @media screen and(max-width: 487px) {
+      grid-template-columns: 244px;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 30px;
+    }
   }
 
   &__logo {
